@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #004365;
+
+  --primary-orange: #ef4d3a;
+  --secondary-orange: #fef4f3;
+
+  --primary-green: #2ad94a;
+
+
+  --primary-gray: #e5ecef;
+
+  --font-black: #232222;
+  --font-white: #e5ecef;
+  --font-gray: #9e9ea5;
+}
+
+body {
+  font-size: 16px;
+  color: var(--font-black);
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sarabun);
+    line-height: 1.5;
+  }
+
+  h2 { font-size: 36px; line-height: 1.2; font-weight: 600; }
+  h3 { font-size: 32px; line-height: 1.2; font-weight: 600; }
+  h4 { font-size: 28px; line-height: 1.2; font-weight: 600; }
+
+  thead th {
+    @apply py-2 px-3 text-left
+  }
+
+  tbody td { 
+    @apply py-[6px] px-3
+  }
+}
+
+@layer components {
+  .input {
+    @apply mb-2 px-3 pt-[8px] pb-[8px] text-xs border border-[#ccc] rounded-lg outline-none
+  }
+
+  .input-search {
+    @apply w-full pt-[8px] pb-[6px] px-4 text-sm border outline-none rounded-lg
+  }
+
+  .btn-create {
+    @apply w-full py-2 px-4 font-semibold text-white bg-primary-orange rounded-lg
+  }
+
+  .btn-login {
+    @apply w-full mt-4 pt-2 pb-[10px] text-white font-semibold bg-primary-green rounded-lg
+  }
+
+  .btn-cancel {
+    @apply w-full mt-4 pt-2 pb-[10px] text-white font-semibold bg-primary-orange rounded-lg
+  }
+
+  .tags {
+    @apply inline-block mt-[6px] px-3 pt-1 pb-[4px] font-medium text-xs text-primary-orange bg-secondary-orange rounded-md
+  }
+}
+
+@layer utilities {
+  .quil-content {
+  line-height: 1.5;
+}
+
+.quil-content h1 {
+  font-size: 2em;
+}
+
+.quil-content h2 {
+  font-size: 1.5em;
+}
+
+.quil-content h3 {
+  font-size: 1.2em;
+}
+
+.quil-content p {
+  margin-bottom: 10px;
+}
+
+.quil-content a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.quil-content ol {
+  list-style: decimal;
+}
+
+.quil-content  ul {
+  list-style: circle;
+}
+
+.quil-content  ul, .quil-content ol {
+  margin-left: 22px;
+  margin-bottom: 10px;
+}
+
+.quil-content blockquote {
+  color: #656668;
+  border-left: 4px solid #ccc;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding-left: 16px;
+}
+
+.quil-content code {
+  font-size: 90%;
+  padding: 2px 4px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.quil-content pre {
+  white-space: pre-wrap;
+  margin-bottom: 2px;
+  margin-top: 5px;
+  padding: 8px 10px;
+  background-color: #23241f;
+  color: #f8f8f2;
+  overflow-x: visible;
+  border-radius: 10px;
+} 
+}
